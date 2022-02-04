@@ -4,6 +4,7 @@
 void PassManager::ReadFile(){
 	inFile.open("lastNames.txt");
 	outFile.open("raw.txt");
+	outFile2.open("encrypted.txt");
 	std::string trash;
 
 	while(!inFile.eof()){
@@ -11,18 +12,19 @@ void PassManager::ReadFile(){
 		inFile >> lastName >> trash >> trash >> trash;	
 		password = GeneratePass(lastName);
 		outFile << lastName << " " << password << std::endl;
-		
+		encryptedPass = cipher.Encrypt(password);
+		outFile2 << lastName << " "  <<  encryptedPass  <<std::endl;
 	}
 	
 	inFile.close();
 	outFile.close();
-
-	
+	outFile2.close();	
 }
 
 PassManager::PassManager(){
 	lastName = "";
 	password = "";
+	encryptedPass = "";
 }
 
 std::string PassManager::GeneratePass(std::string lastName){
