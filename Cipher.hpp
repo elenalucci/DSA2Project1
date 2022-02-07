@@ -10,11 +10,11 @@ class Cipher{
 	private:
 	    std::string password;
 	    std::string encryptedPass;
+	    std::string decryptedPass;
 	    std::string const key = "hijackers";
 	public:
 	    Cipher();
 	    std::string Encrypt(std::string password);
-	    //std::string Decrypt(std::string encryptPass);
 
 };
 

@@ -15,3 +15,4 @@ std::string Cipher::Encrypt(std::string password){
 
 	return encryptedPass;
 }
+

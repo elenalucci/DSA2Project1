@@ -1,21 +1,21 @@
 #ifndef NODE_HPP
 #define NODE_HPP
+#include <string>
 
 class Node{
 	
 	private:
-	    std::string lastName;
+	    std::string key;
 	    std::string password;
 	    Node* next;
-	    Node* prev;
-	public:
-	    Node(std::string lastName,std::string password);
-	    Node(std::string lastName, std::string password, Node* next, Node* prev);
-	    Node(std::string lastName, std::string password, Node* prev);
-	    void SetNext(Node* next);
-	    void SetPrev(Node* prev);
-	    void SetPair(std::string lastName, std::string password);
 	    
+	public:
+	    Node(std::string key,std::string password);
+	    void SetNext(Node* next);
+	    void SetPair(std::string key, std::string password);
+	    std::string GetKey();
+	    std::string GetPass();
+	    Node* GetNext();
 };
 
 
