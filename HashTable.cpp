@@ -1,6 +1,7 @@
+// Elena Lucci COP4534
 #include "HashTable.hpp"
 
-
+//default constructor that creates array
 HashTable::HashTable(){
 	
 	table = new Node*[total];
@@ -12,7 +13,7 @@ HashTable::HashTable(){
 	size = 0;
 	hash = 0;
 }
-
+//generates a hash
 int HashTable::Hash(std::string key){	
 
 	for(int i=0; i< key.length();i++){
@@ -40,7 +41,7 @@ int HashTable::Hash(std::string key){
 	return hash % total;
 
 }
-
+//adds last name and ecnrypted password pair to hashtable
 void HashTable::Add(std::string key, std::string password){
 	
 	if(size >= total){
@@ -61,7 +62,7 @@ void HashTable::Add(std::string key, std::string password){
 	size++;
 
 }
-
+// not sure why it doesnt work
 /*bool HashTable::Find(std::string key){
 	
 	hash = Hash(key);
@@ -89,7 +90,7 @@ void HashTable::Add(std::string key, std::string password){
 	std::cout << "false";
 	return false;
 }*/
-
+//destructor
 HashTable::~HashTable(){
 	for(int i=0; i<size; i++){
 		delete table[i];

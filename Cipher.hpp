@@ -1,3 +1,4 @@
+// Elena Lucci COP4534
 #ifndef Cipher_hpp
 #define Cipher_hpp
 #include <iostream>

@@ -1,3 +1,4 @@
+// Elena Lucci COP4534
 #ifndef NODE_HPP
 #define NODE_HPP
 #include <string>

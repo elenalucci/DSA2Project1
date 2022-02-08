@@ -1,10 +1,11 @@
+// Elena Lucci COP4534
 #include "Cipher.hpp"
-
+//default constructor
 Cipher::Cipher(){
 	password = "";
 	encryptedPass = "";
 }
-
+// encrypts password
 std::string Cipher::Encrypt(std::string password){
 	
 	encryptedPass = "";

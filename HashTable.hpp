@@ -1,3 +1,4 @@
+// Elena Lucci COP4534
 #ifndef HashTable_hpp
 #define HashTable_hpp
 #include "Node.hpp"
